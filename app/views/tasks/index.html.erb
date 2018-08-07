@@ -5,8 +5,8 @@
     <li>
       <i class="<%= task.completed ? 'far fa-check-square' : 'far fa-square' %>"></i>
       <%= link_to task.title, task%>
-      <%= link_to 'X', task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'} %>
+      <%= link_to "    🗑", task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'} %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task ⭐️', new_task_path, class: 'btn btn-primary' %>
