@@ -1,0 +1,11 @@
+<h1>My Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <i class="<%= task.completed ? 'far fa-check-square' : 'far fa-square' %>"></i>
+      <%= link_to task.title, task %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'New Task', tasks_new_path %>
