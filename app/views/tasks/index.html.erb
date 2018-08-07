@@ -4,8 +4,9 @@
   <% @tasks.each do |task| %>
     <li>
       <i class="<%= task.completed ? 'far fa-check-square' : 'far fa-square' %>"></i>
-      <%= link_to task.title, task %>
+      <%= link_to task.title, task%>
+      <%= link_to 'X', task_path(task), method: :delete, :data => {:confirm => 'Are you sure?'} %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'New Task', tasks_new_path %>
+<%= link_to 'New Task', new_task_path %>
