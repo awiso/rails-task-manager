@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :tasks
+  root 'tasks#index'
 
   # get 'tasks', to: 'tasks#index'
   # get 'tasks/new', to: 'tasks#new', as: :tasks_new
